@@ -33,9 +33,9 @@ def geoid_lookup(geoid):
     geoid_block = geoid[11:]
     
     return {
-    f"State/Territory: {state_name}\n"
-    f"County: {county_name}\n"
-    f"Census Tract: {geoid_tract if geoid_tract else 'None'}\n"
+    f"State/Territory: {state_name}  \n"
+    f"County: {county_name}  \n"
+    f"Census Tract: {geoid_tract if geoid_tract else 'None'}  \n"
     f"Census Block: {geoid_block if geoid_block else 'None'}"
 }
 
