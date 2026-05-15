@@ -1,0 +1,3 @@
+pandas==3.0.3
+rsconnect_python==1.29.0
+streamlit==1.57.0
