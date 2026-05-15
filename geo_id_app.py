@@ -33,10 +33,10 @@ def geoid_lookup(geoid):
     geoid_block = geoid[11:]
     
     return {
-    f"State/Territory: {state_name}  \n"
-    f"County: {county_name}  \n"
-    f"Census Tract: {geoid_tract if geoid_tract else 'None'}  \n"
-    f"Census Block: {geoid_block if geoid_block else 'None'}"
+    f"**State/Territory:** {state_name}  \n"
+    f"**County:** {county_name}  \n"
+    f"**Census Tract:** {geoid_tract if geoid_tract else 'None'}  \n"
+    f"**Census Block:** {geoid_block if geoid_block else 'None'}"
 }
 
 # Streamlit app
@@ -49,6 +49,6 @@ user_input = st.text_input("Enter your GEOID here: ")
 if st.button("Run Lookup"):
     if user_input:  # only run if something was entered
         result = geoid_lookup(user_input)
-        st.success(result)
+        st.markdown(result)
     else:
         st.warning("Please enter a GEOID first.")
