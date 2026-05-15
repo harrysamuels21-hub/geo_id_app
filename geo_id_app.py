@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 
 def load_data():
-    return pd.read_csv(r'C:\Users\harry.samuels\Documents\Geo_ID\data\county_merg.csv',
+    return pd.read_csv('county_merg.csv',
   	   dtype={
             "STATEFP_x": str,
             "COUNTYGEOID": str,
