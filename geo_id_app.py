@@ -33,10 +33,10 @@ def geoid_lookup(geoid):
     geoid_block = geoid[11:]
     
     return {
-    "State/Territory": state_name,
-    "County": county_name,
-    "Census Tract": geoid_tract if geoid_tract else None,
-    "Census Block": geoid_block if geoid_block else None
+    f"State/Territory: {state_name}\n"
+    f"County: {county_name}\n"
+    f"Census Tract: {geoid_tract if geoid_tract else 'None'}\n"
+    f"Census Block: {geoid_block if geoid_block else 'None'}"
 }
 
 # Streamlit app
