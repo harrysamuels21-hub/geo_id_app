@@ -32,12 +32,12 @@ def geoid_lookup(geoid):
     #Census Block Query
     geoid_block = geoid[11:]
     
-    return {
+    return (
     f"**State/Territory:** {state_name}  \n"
     f"**County:** {county_name}  \n"
     f"**Census Tract:** {geoid_tract if geoid_tract else 'None'}  \n"
     f"**Census Block:** {geoid_block if geoid_block else 'None'}"
-}
+    )
 
 # Streamlit app
 st.title("GeoID Look-Up App")
